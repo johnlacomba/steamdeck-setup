@@ -1,6 +1,6 @@
 #!/bin/bash
 apptoinstallList="vi glances"
-piptoinstallList="requests"
+piptoinstallList="requests beautifulsoup4"
 
 echo "--------------------------------------" 
 echo "Disabling the read-only lock on the file system."
@@ -44,4 +44,4 @@ fi
 echo "--------------------------------------"
 echo "Installing pip packages from \$piptoinstallList"
 echo "--------------------------------------"
-eval 'pip install --no-input ${piptoinstallList}'
+eval 'sudo -u deck pip install --no-input ${piptoinstallList}'
