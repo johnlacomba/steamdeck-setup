@@ -1,5 +1,4 @@
 #!/bin/bash
-set -x
 apptoinstallList="vi glances"
 
 # Disable file system being read only
