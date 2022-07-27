@@ -1,5 +1,6 @@
 #!/bin/bash
 apptoinstallList="vi glances"
+piptoinstallList="requests"
 
 echo "--------------------------------------" 
 echo "Disabling the read-only lock on the file system."
@@ -39,3 +40,8 @@ if [[ ! $(grep "append_path '/home/deck/.local/bin'" /etc/profile) ]]; then
   echo "--------------------------------------" 
   sudo sed -i "/# Append our default paths/ a append_path '/home/deck/.local/bin'" /etc/profile
 fi
+
+echo "--------------------------------------"
+echo "Installing pip packages from \$piptoinstallList"
+echo "--------------------------------------"
+eval 'pip install --no-input ${piptoinstallList}'
