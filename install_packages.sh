@@ -52,7 +52,7 @@ sudo -u deck python get-pip.py
 echo "--------------------------------------" 
 echo "Cleaning up pip setup script."
 echo "--------------------------------------" 
-rm get-pip.py
+rm ./get-pip.py
 
 # If the pip directory has not been added to $PATH then add it
 if [[ ! $(grep "append_path '/home/deck/.local/bin'" /etc/profile) ]]; then
